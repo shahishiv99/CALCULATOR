@@ -10,6 +10,12 @@ body {
   align-items: center;
   justify-content: center;
   background-color: whitesmoke;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
 }
 
 .calculator {
@@ -37,6 +43,7 @@ body {
   padding: 20px;
   font-family: "Josefin Sans", sans-serif;
   overflow-x: auto;
+  outline: none;
 }
 
 /* Custom Scrollbar */

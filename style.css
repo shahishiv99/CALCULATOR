@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.calculator {
+  width: 400px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+  background: black;
+  color: white;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+}
+
+.display h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  overflow-x: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Buttons */
+.calculator-button {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  padding: 10px;
+}
+
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(184, 183, 183);
+  border: none;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.oprator {
+  color: white;
+  background: gray;
+  font-size: 2em;
+}
+.clear {
+  background: rgb(231, 37, 37);
+  color: white;
+}
+
+.clear:hover {
+  filter: brightness(90%);
+}
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+  background: rgb(46, 190, 46);
+}
+
+/* Media Query */
+@media only screen and (max-width: 600px) {
+  .calculator {
+    width: 90%;
+  }
+}
